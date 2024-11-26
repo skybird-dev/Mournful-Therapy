@@ -97,12 +97,16 @@ details[open] summary {
 
 /* Custom Arrow Indicator */
 summary::before {
-    content: '▶';
+    content: '';
     display: inline-block;
-    transform: rotate(0deg);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid var(--primary);
+    margin-right: 0.5em;
     transition: transform 0.2s;
-    margin-right: 0.3em; /* Adjust the value as needed */
-
+    transform-origin: center;
 }
 
 details[open] summary::before {
@@ -165,7 +169,7 @@ details[open] summary::before {
 }
 
 .disclaimer summary::before {
-    content: '⚠️'; /* Warning icon */
+    content: ''; /* Warning icon */
     display: inline-block;
     margin-right: 0.5em;
 }
