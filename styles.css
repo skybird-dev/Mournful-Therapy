@@ -88,11 +88,11 @@ summary {
     cursor: pointer;
     outline: none;
     color: var(--primary);
-    list-style: none; /* Hides default marker in some browsers */
+    list-style: none;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
-/* Hide default disclosure triangle */
+
 summary::-webkit-details-marker {
     display: none;
 }
@@ -110,9 +110,9 @@ summary::before {
     display: inline-block;
     width: 0;
     height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 7px solid var(--primary);
+    border-top: 8px solid transparent;    /* Increased from 5px to 8px */
+    border-bottom: 8px solid transparent; /* Increased from 5px to 8px */
+    border-left: 12px solid var(--primary); /* Increased from 7px to 12px */
     margin-right: 0.5em;
     transition: transform 0.2s;
     transform-origin: center;
