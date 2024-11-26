@@ -1,0 +1,191 @@
+/* Light Mode Variables */
+:root {
+    --base-bg: #fdf6e3;        /* Solarized Base3 */
+    --base-text: #657b83;      /* Solarized Base00 */
+    --primary: #268bd2;        /* Solarized Blue */
+    --secondary: #2aa198;      /* Solarized Cyan */
+    --accent: #d33682;         /* Solarized Magenta */
+    
+    /* Announcement colors */
+    --announcement-bg: #657b83;   /* Darker background */
+    --announcement-text: #fdf6e3; /* Light text */
+    
+    /* Disclaimer background color */
+    --disclaimer-bg: #073642;     /* Dark teal */
+}
+
+/* Dark Mode Variables */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --base-bg: #002b36;       /* Solarized Base03 */
+        --base-text: #839496;     /* Solarized Base0 */
+        
+        /* Announcement colors */
+        --announcement-bg: #93a1a1; /* Lighter background */
+        --announcement-text: #002b36; /* Dark text */
+        
+        /* Disclaimer background color */
+        --disclaimer-bg: #eee8d5;   /* Light tan */
+    }
+}
+
+/* Base Styles */
+body {
+    background-color: var(--base-bg);
+    color: var(--base-text);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary);
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    background-color: var(--accent);
+    color: var(--base-bg);
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+/* Announcement Section */
+.announcement {
+    background-color: var(--announcement-bg);
+    color: var(--announcement-text);
+    padding: 1em;
+    margin: 1em 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Collapsible Sections */
+details {
+    margin: 1em 0;
+    border: 1px solid var(--base-text);
+    border-radius: 5px;
+    padding: 0.5em;
+    background-color: var(--base-bg);
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    color: var(--primary);
+    list-style: none; /* Hides default marker */
+}
+
+details[open] summary {
+    color: var(--accent);
+}
+
+/* Custom Arrow Indicator */
+summary::before {
+    content: '▶';
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+    margin-right: 0.3em; /* Adjust the value as needed */
+
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+/* Video Container */
+.video-container {
+    background-color: var(--base-bg);
+    border: 1px solid var(--base-text);
+    border-radius: 5px;
+    margin: 1em 0;
+    padding: 1em;
+}
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Transcript Styles */
+.transcript {
+    margin-top: 1em;
+    color: var(--base-text);
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.transcript h3 {
+    margin-bottom: 0.5em;
+    color: var(--primary);
+}
+/* Disclaimer Section */
+.disclaimer details {
+    margin: 1em 0;
+    border: 1px solid var(--base-text);
+    border-radius: 5px;
+    padding: 1em;
+    background-color: var(--disclaimer-bg); /* Use the new disclaimer background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.disclaimer summary {
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    color: var(--announcement-text); /* Use contrasting color */
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.disclaimer summary::before {
+    content: '⚠️'; /* Warning icon */
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+.disclaimer details[open] summary {
+    color: var(--accent);
+}
+
+.disclaimer p {
+    margin: 0.5em 0;
+    color: var(--announcement-text); /* Light text for dark background */
+}
+
+@media (prefers-color-scheme: dark) {
+    .disclaimer summary,
+    .disclaimer p {
+        color: var(--base-text); /* Dark text for light background */
+    }
+}
+
+.disclaimer p strong {
+    color: var(--accent);
+}

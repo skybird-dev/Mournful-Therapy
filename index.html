@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindless Support Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mindless Support Services</h1>
+        <h2>By Mournful Therapy Group</h2>
+    </header>
+<!-- Non-Collapsible Video Section -->
+<div class="video-container">
+    <!-- Video Wrapper -->
+    <div class="video-wrapper">
+        <iframe src="https://player.vimeo.com/video/1033636218?h=815b404cbd&amp;title=0&amp;byline=0&amp;portrait=0&amp;vimeo_logo=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen" title="Mental Health Hotline"></iframe>
+    </div>
+</div>
+    <!-- Collapsible Video Section -->
+<details>
+    <summary>Watch How to Feel Viabrant!</summary>
+    <div class="video-container">
+        <!-- Video Wrapper -->
+        <div class="video-wrapper">
+            <iframe id="vimeo-player" src="https://player.vimeo.com/video/1033597911?h=ebbafcab53&amp;title=0&amp;byline=0&amp;portrait=0&amp;vimeo_logo=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen" title="Viabrant"></iframe>
+        </div>
+        <!-- Transcript Section -->
+        <div class="transcript">
+            <h3>Viabrant</h3>
+            <p>
+                Viabrant, the number one leading medicine against cold symptoms, is a great way to fight symptoms such as runny nose, sore throat, or coughing. 
+            </p>
+            <p>               
+                Although side effects that may occur after taking the pill may include skin on arms and legs starting to appear green.
+            </p>
+            <p>
+                It is very normal for anal leakage to start bleeding one to three times per day. Please wear a diaper if needed.
+            </p>
+            <p>
+                After taking the Viabrant pill, eyesight may start to appear blurry, eventually leading to a blind coma.
+            </p>
+            <p>
+                There is a 98% chance that you will not be able to have kids if taking Viabrant.
+            </p>
+            <p>
+                Viabrant may also affect your daily life with side effects such as suicidal thoughts, self-hate, depression, and a very strong urge to harm people around you, including family, friends, and loved ones.
+            </p>
+            <p>
+                Before taking Viabrant, please check with your doctor for any allergies that you may have.
+            </p>
+        </div>
+    </div>
+</details>
+    <!-- Vimeo Player API Script -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <!-- JavaScript to Control Video Playback -->
+    <script>
+        var iframe = document.getElementById('vimeo-player');
+        var player = new Vimeo.Player(iframe);
+
+        var detailsElem = document.querySelector('details');
+
+        // Function to detect mobile devices
+        function isMobileDevice() {
+            return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        detailsElem.addEventListener('toggle', function(event) {
+            if (detailsElem.open) {
+                if (!isMobileDevice()) {
+                    player.play().catch(function(error) {
+                        console.error('Error playing the video:', error.name);
+                    });
+                } else {
+                    player.pause();
+                }
+            } else {
+                player.pause();
+            }
+        });
+    </script>
+
+    <section class="announcement">
+        <p><strong>Please note:</strong> We no longer accept WhateverCare Insurance for our Primal Scream Therapy, as they are PPO (Pretty Pathetic Options). We do take HMO.</p>
+    </section>
+    <section class="faq">
+        <h2>WhaeverCare HMO F.A.Q.</h2>
+        <details class="faq-item">
+            <summary>What does HMO stand for?</summary>
+            <p>This is actually a variation of the phrase, "Hey, Moe!" Its roots go back to a concept pioneered by Dr. Moe Howard, who discovered that a patient could be made to forget about the pain in his foot if he was poked hard enough in the eyes.</p>
+        </details>
+        <details class="faq-item">
+            <summary>I just joined an HMO. How difficult will it be to choose the doctor I want?</summary>
+            <p>Just slightly more difficult than choosing your parents. Your insurer will provide you with a book listing all the doctors who were participating in the plan. These doctors basically fall into two categories: those who are no longer accepting new patients, and those who will see you but are no longer part of the plan. But don't worry, the remaining doctor who is still in the plan and accepting new patients has an office just a half day's drive away.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Do all diagnostic procedures require pre-certification?</summary>
+            <p>No. Only those you need.</p>
+        </details>
+        <details class="faq-item">
+            <summary>What are pre-existing conditions?</summary>
+            <p>This is a term used by the grammatically challenged when they want to talk about existing conditions. Unfortunately, we appear to be pre-stuck with it.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Can I get coverage for my pre-existing conditions?</summary>
+            <p>Certainly, as long as they don't require any treatment.</p>
+        </details>
+        <details class="faq-item">
+            <summary>What happens if I want to try alternative forms of medicine?</summary>
+            <p>You'll need to find alternative forms of payment.</p>
+        </details>
+        <details class="faq-item">
+            <summary>My pharmacy plan only covers generic drugs, but I need the name brand. I tried the generic medication, but it gave me a stomach ache. What should I do?</summary>
+            <p>Poke yourself in the eye.</p>
+        </details>
+        <details class="faq-item">
+            <summary>What if I'm away from home and I get sick?</summary>
+            <p>You really shouldn't do that.</p>
+        </details>
+        <details class="faq-item">
+            <summary>I think I need to see a specialist, but my doctor insists he can handle my problem. Can a general practitioner really perform a heart transplant right in his office?</summary>
+            <p>Hard to say, but considering that all you're risking is the $10 co-payment, there is no harm giving him a shot at it.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Will health care be any different in the next century?</summary>
+            <p>No. But if you call right now, you might get an appointment by then.</p>
+        </details>
+    </section>
+        <!-- Disclaimer Section -->
+    <section class="disclaimer">
+       <details>
+           <summary>Disclaimer and Terms of Use</summary>
+           <p>
+               <strong>Disclaimer:</strong> This website is a parody and is intended for humorous purposes only. The content presented is fictitious and should not be taken seriously. Any resemblance to real persons, living or dead, or actual events is purely coincidental.
+           </p>
+           <p>
+               <strong>Terms of Use:</strong> By accessing this site, you acknowledge that the content is satirical and agree not to take any of the information seriously or act upon it. We are not responsible for any actions taken based on the content of this site.
+           </p>
+        </details>
+    </section>
+</body>
+</html>
